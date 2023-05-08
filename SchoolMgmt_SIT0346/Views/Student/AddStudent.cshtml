@@ -1,0 +1,123 @@
+﻿@model SchoolMgmt_SIT0346.Models.Models.StudentModel
+@using SchoolMgmt_SIT0346.Models.Context
+@{
+    ViewBag.Title = "AddStudent";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <!-- [ breadcrumb ] start -->
+                <div class="page-header">
+                    <div class="page-block">
+                        <div class="row align-items-center">
+                            <div class="col-md-12">
+                                <div class="page-header-title">
+                                    <h5 class="m-b-10">Student</h5>
+                                </div>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                    <li class="breadcrumb-item"><a href="javascript:">Add Student</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [ breadcrumb ] end -->
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <!-- [ Main Content ] start -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Student Details</h5>
+                                    </div>
+                                    <div class="card-block">
+                                        @using (Html.BeginForm("Add", "Student", FormMethod.Post, new { id = "addNewStudentForm" }))
+                                        {
+                                            @Html.AntiForgeryToken()
+
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-6 my-2">
+                                                        <label class="form-label">First Name</label>
+                                                        @Html.EditorFor(m => m.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                                                        @Html.ValidationMessageFor(m => m.FirstName)
+                                                    </div>
+                                                    <div class="col-md-6 ps-2 my-2">
+                                                        <label class="form-label">Last Name</label>
+                                                        @Html.EditorFor(m => m.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                                                        @Html.ValidationMessageFor(m => m.LastName)
+                                                    </div>
+                                                    <div class="col-md-12 my-2">
+                                                        <label class="form-label">Email Address</label>
+                                                        @Html.EditorFor(m => m.Email, new { htmlAttributes = new { @class = "form-control", @type = "email" } })
+                                                        @Html.ValidationMessageFor(m => m.Email)
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 my-2">
+                                                        <label class="form-label">Mobile Number</label>
+                                                        @Html.EditorFor(m => m.MobileNo, new { htmlAttributes = new { @class = "form-control", @type = "number" } })
+                                                        @Html.ValidationMessageFor(m => m.MobileNo)
+                                                    </div>
+                                                    <div class="col-md-12 my-2">
+                                                        <label class="form-label">Password</label>
+                                                        @Html.EditorFor(m => m.Password, new { htmlAttributes = new { @class = "form-control", @type = "password" } })
+                                                        @Html.ValidationMessageFor(m => m.Password)
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 my-2">
+                                                        <label>Address</label>
+                                                        @Html.TextAreaFor(m => m.Address, new { @class = "form-control", @rows = "4" })
+                                                        @Html.ValidationMessageFor(m => m.Address)
+                                                    </div>
+                                                    <div class="col-md-12 my-2">
+                                                        <label class="d-block">Select Teachers</label>
+                                                        @Html.DropDownListFor(m => m.Teachers, new SelectList(ViewBag.Teachers, "Id", "FirstName"), new { @class = "multiple-checkboxes w-100", @multiple = "multiple", @id = "SelectedTeachers" })
+                                                        @Html.ValidationMessageFor(m => m.Teachers)
+                                                    </div>
+                                                    <div class="col-md-12 my-2">
+                                                        <div class="list-group techerListing">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt-3" style="text-align:left">
+                                                        <label class="form-label">Select Country</label>
+                                                        @Html.DropDownListFor(m => m.CountryId, new SelectList(ViewBag.Countries, "Id", "name"), "--- select country ---", new { @class = "form-control", @id = "Country" })
+                                                        @Html.ValidationMessageFor(m => m.CountryId)
+                                                    </div>
+                                                    <div class="col-md-12 mt-3" style="text-align:left">
+                                                        <label class="form-label">Select State</label>
+                                                        @Html.DropDownListFor(m => m.StateId, new SelectList(new List<State>(), "Id", "name"), "-- Please Select Country ---", new { @class = "form-control", @id = "States" })
+                                                        @Html.ValidationMessageFor(m => m.StateId)
+                                                    </div>
+                                                    <div class="col-md-12 mt-3">
+                                                        <label class="form-label">Select City</label>
+                                                        @Html.DropDownListFor(m => m.CityId, new SelectList(new List<City>(), "Id", "name"), "-- Please Select State ---", new { @class = "form-control", @id = "Cities" })
+                                                        @Html.ValidationMessageFor(m => m.CityId)
+                                                    </div>
+                                                    <div class="col-md-12 mt-3 d-flex justify-content-end">
+                                                        <button type="submit" class="btn btn-success" title="" data-toggle="tooltip" data-original-title="btn btn-success">Add</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [ Main Content ] end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.multiple-checkboxes').multiselect('rebuild');
+</script>

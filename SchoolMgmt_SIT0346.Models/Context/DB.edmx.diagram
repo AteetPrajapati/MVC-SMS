@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d0a4b2b1505b425dbdfd83bdfa870f27" Name="Diagram1">
+        <EntityTypeShape EntityType="AP351AteetPrajapatiModel.City" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AP351AteetPrajapatiModel.Country" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AP351AteetPrajapatiModel.DeletedStudentsId" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AP351AteetPrajapatiModel.State" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AP351AteetPrajapatiModel.Student" Width="1.5" PointX="7.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AP351AteetPrajapatiModel.User" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AP351AteetPrajapatiModel.DeletedStudent" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__City__CountryID__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__City__StateID__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__Student__City__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__State__CountryId__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__Student__Country__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__Student__State__31EC6D26" ManuallyRouted="false" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__Student__Created__3B75D760" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AP351AteetPrajapatiModel.StudentTeacher" Width="1.5" PointX="9.75" PointY="11.875" />
+        <EntityTypeShape EntityType="AP351AteetPrajapatiModel.StudentTeachersSubject" Width="1.5" PointX="9.75" PointY="8.75" />
+        <EntityTypeShape EntityType="AP351AteetPrajapatiModel.Subject" Width="1.5" PointX="7.5" PointY="14.875" />
+        <EntityTypeShape EntityType="AP351AteetPrajapatiModel.Teacher" Width="1.5" PointX="7.5" PointY="2.75" />
+        <EntityTypeShape EntityType="AP351AteetPrajapatiModel.TeacherSubject" Width="1.5" PointX="9.75" PointY="0.75" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__Teacher__City__4316F928" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__Teacher__Country__44FF419A" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__Teacher__State__440B1D61" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__StudentTe__Stude__5070F446" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__StudentTe__Stude__59063A47" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__StudentTe__Teach__4F7CD00D" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__StudentTe__Teach__59FA5E80" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__StudentTe__Teach__5AEE82B9" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__TeacherSu__Subje__48CFD27E" />
+        <AssociationConnector Association="AP351AteetPrajapatiModel.FK__TeacherSu__Teach__47DBAE45" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

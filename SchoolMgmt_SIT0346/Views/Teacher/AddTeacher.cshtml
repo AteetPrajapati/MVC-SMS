@@ -1,0 +1,121 @@
+﻿@model SchoolMgmt_SIT0346.Models.Models.TeacherModel
+@using SchoolMgmt_SIT0346.Models.Context
+@{
+    ViewBag.Title = "AddTeacher";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <!-- [ breadcrumb ] start -->
+                <div class="page-header">
+                    <div class="page-block">
+                        <div class="row align-items-center">
+                            <div class="col-md-12">
+                                <div class="page-header-title">
+                                    <h5 class="m-b-10">Teacher</h5>
+                                </div>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                    <li class="breadcrumb-item"><a href="/Teacher">Teacher</a></li>
+                                    <li class="breadcrumb-item"><a href="/Teacher/Add">Add Teacher</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [ breadcrumb ] end -->
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <!-- [ Main Content ] start -->
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5>Teacher Details</h5>
+                                    </div>
+                                    <div class="card-block">
+                                        @using (Html.BeginForm("Add", "Teacher", FormMethod.Post))
+                                        {
+                                            @Html.AntiForgeryToken()
+                                            <div class="row">
+                                                <div class="col-sm-6 mb-2">
+                                                    <label for="" class="form-label">First Name</label>
+                                                    @Html.EditorFor(m => m.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(m => m.FirstName)
+                                                </div>
+                                                <div class="col-sm-6 mb-2">
+                                                    <label for="" class="form-label">Last Name</label>
+                                                    @Html.EditorFor(m => m.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                                                    @Html.ValidationMessageFor(m => m.LastName)
+                                                </div>
+                                                <div class="col-sm-6 mb-2">
+                                                    <label for="" class="form-label">Email address</label>
+                                                    @Html.EditorFor(m => m.Email, new { htmlAttributes = new { @class = "form-control", @type = "email" } })
+                                                    @Html.ValidationMessageFor(m => m.Email)
+                                                </div>
+                                                <div class="col-sm-6 mb-2">
+                                                    <label for="" class="form-label">Gender</label>
+                                                    @Html.DropDownListFor(m => m.Geneder, new SelectList(new List<String>() { "Male", "Female" }), "--- select gender ---", new { @class = "form-control" })
+                                                </div>
+                                                <div class="col-sm-6 mb-2">
+                                                    <label for="" class="form-label">Mobile Number</label>
+                                                    @Html.EditorFor(m => m.MobileNo, new { htmlAttributes = new { @class = "form-control", @type = "number" } })
+                                                    @Html.ValidationMessageFor(m => m.MobileNo)
+                                                </div>
+                                                <div class="col-sm-6 mb-2">
+                                                    <label for="" class="form-label d-block">Subjects</label>
+                                                    @*<select class="multiple-checkboxes" multiple="multiple">
+                                                            <option value="1">PHP</option>
+                                                            <option value="2">JavaScript</option>
+                                                            <option value="3">Java</option>
+                                                            <option value="4">SQL</option>
+                                                            <option value="6">Jquery</option>
+                                                            <option value="7">.Net</option>
+                                                        </select>*@
+                                                    @Html.DropDownListFor(m => m.Subjects, new SelectList(ViewBag.Subjects, "Id", "Name"), new { @class = "multiple-checkboxes", @multiple = "multiple" })
+                                                    @Html.ValidationMessageFor(m => m.Subjects)
+                                                </div>
+                                                <div class="col-md-12 my-2">
+                                                    <label for="" class="form-label d-block">Address</label>
+                                                    @Html.TextAreaFor(m => m.Address, new { @class = "form-control", @rows = "4" })
+                                                    @Html.ValidationMessageFor(m => m.Address)
+                                                </div>
+                                                <div class="col-md-6 mt-3" style="text-align:left">
+                                                    <label class="form-label d-block">Select Country</label>
+                                                    @Html.DropDownListFor(m => m.CountryId, new SelectList(ViewBag.Countries, "Id", "name"), "--- select country ---", new { @class = "form-control", @id = "Country" })
+                                                    @Html.ValidationMessageFor(m => m.CountryId)
+                                                </div>
+                                                <div class="col-md-6 mt-3" style="text-align:left">
+                                                    <label class="form-label d-block">Select State</label>
+                                                    @Html.DropDownListFor(m => m.StateId, new SelectList(new List<State>(), "Id", "name"), "-- Please Select Country ---", new { @class = "form-control", @id = "States" })
+                                                    @Html.ValidationMessageFor(m => m.StateId)
+                                                </div>
+                                                <div class="col-md-6 mt-3">
+                                                    <label class="form-label d-block">Select City</label>
+                                                    @Html.DropDownListFor(m => m.CityId, new SelectList(new List<City>(), "Id", "name"), "-- Please Select State ---", new { @class = "form-control", @id = "Cities" })
+                                                    @Html.ValidationMessageFor(m => m.CityId)
+                                                </div>
+                                                <div class="col-md-12 mt-3 d-flex justify-content-end">
+                                                    <button type="submit" class="btn btn-success" title="" data-toggle="tooltip" data-original-title="btn btn-success">Add</button>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [ Main Content ] end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('.multiple-checkboxes').multiselect('rebuild');
+</script>
+
+

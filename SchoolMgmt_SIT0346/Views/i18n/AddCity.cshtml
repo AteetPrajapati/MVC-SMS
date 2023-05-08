@@ -1,0 +1,88 @@
+﻿
+@model SchoolMgmt_SIT0346.Models.Models.CityModel
+@using SchoolMgmt_SIT0346.Models.Context
+
+@{
+    ViewBag.Title = "AddCity";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <!-- [ breadcrumb ] start -->
+                <div class="page-header">
+                    <div class="page-block">
+                        <div class="row align-items-center">
+                            <div class="col-md-12">
+                                <div class="page-header-title">
+                                    <h5 class="m-b-10">Countries</h5>
+                                </div>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                    <li class="breadcrumb-item"><a href="javascript:">Add City</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [ breadcrumb ] end -->
+                <div class="main-body">
+                    <div class="page-wrapper">
+                        <!-- [ Main Content ] start -->
+                        <div class="row">
+                            <!--[ Recent Users ] start-->
+                            <div class="col-xl-8 col-md-6">
+                                <div class="card Recent-Users">
+                                    <div class="card-header">
+                                        <h5>City Details</h5>
+                                    </div>
+                                    <div class="card-block px-0 py-3">
+                                        @using (Html.BeginForm("AddCity", "i18n", FormMethod.Post))
+                                        {
+                                            @Html.AntiForgeryToken()
+
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-12" style="text-align:left">
+                                                        <label class="d-block">Select Country</label>
+                                                        @Html.DropDownListFor(m => m.countryId, new SelectList(ViewBag.Countries, "Id", "name"), "--- select country ---", new { @class = "form-control", @id = "Country" })
+
+                                                    </div>
+                                                    <div class="col-md-12" style="text-align:left">
+                                                        <label class="d-block">Select State</label>
+                                                        @Html.DropDownListFor(m => m.stateId, new SelectList(new List<State>(), "Id", "name"), "-- Please Select Country ---", new { @class = "form-control", @id = "States" })
+
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <label class="d-block">City Name</label>
+                                                        @Html.EditorFor(m => m.name, new { htmlAttributes = new { @class = "form-control ps-3" } })
+
+                                                        @Html.ValidationMessageFor(m => m.name)
+                                                        <p class="text-danger text-sm">@(TempData["cityError"] ?? ' ')</p>
+                                                    </div>
+                                                    <div class="col-md-12 mt-5">
+                                                        <input type="submit" class="btn bg-gradient-dark w-100" value="Add" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                            <!--[ Recent Users ] end-->
+                            <!-- [ statistics year chart ] start -->
+                            <!-- [ statistics year chart ] end -->
+                        </div>
+
+                        <!-- [ Main Content ] end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

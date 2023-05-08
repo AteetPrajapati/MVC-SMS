@@ -1,0 +1,17 @@
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\SchoolMgmt_SIT0346.Repositories.dll.config
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\SchoolMgmt_SIT0346.Repositories.dll
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\SchoolMgmt_SIT0346.Repositories.pdb
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\EntityFramework.dll
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\SchoolMgmt_SIT0346.Models.dll
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\SchoolMgmt_SIT0346.Models.pdb
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\SchoolMgmt_SIT0346.Models.dll.config
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\EntityFramework.xml
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\obj\Debug\SchoolMgmt_SIT0346.Repositories.csproj.AssemblyReference.cache
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\obj\Debug\SchoolMgmt_SIT0346.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\obj\Debug\SchoolMgmt_SIT0346.Repositories.csproj.CopyComplete
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\obj\Debug\SchoolMgmt_SIT0346.Repositories.dll
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\obj\Debug\SchoolMgmt_SIT0346.Repositories.pdb
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\SchoolMgmt_SIT0346.Helpers.dll
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\SchoolMgmt_SIT0346.Helpers.pdb

@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="~/Content/assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="~/Content/assets/plugins/animation/css/animate.min.css">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="~/Content/assets/css/style.css">
+    <link rel="stylesheet" href="~/Content/bootstrap-multiselect.css">
+    <link rel="stylesheet" href="~/Content/Site.css">
+</head>
+<body>
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar">
+        <div class="navbar-wrapper">
+            <div class="navbar-brand header-logo">
+                <a href="index.html" class="b-brand">
+                    <div class="b-bg">
+                        <i class="feather icon-trending-up"></i>
+                    </div>
+                    <span class="b-title">Datta Able</span>
+                </a>
+                <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
+            </div>
+            <div class="navbar-content scroll-div">
+                <ul class="nav pcoded-inner-navbar" id="nav">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
+                        <a href="/" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Home</span></a>
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Teacher</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="/Teacher/Index" class="">All Teachers</a></li>
+                            <li class=""><a href="/Teacher/Add" class="">Add Teacher</a></li>
+                        </ul>
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Student</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="/Student/Index" class="">All Students</a></li>
+                            <li class=""><a href="/Student/Add" class="">Add Student</a></li>
+                        </ul>
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Country</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="/i18n/AllCountry" class="">All Countries</a></li>
+                            <li class=""><a href="/i18n/AddCountry" class="">Add Country</a></li>
+                        </ul>
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">State</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="/i18n/AllStates" class="">All States</a></li>
+                            <li class=""><a href="/i18n/AddState" class="">Add State</a></li>
+                        </ul>
+                    </li>
+                    <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">City</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="/i18n/AllCities" class="">All Cities</a></li>
+                            <li class=""><a href="/i18n/AddCity" class="">Add City</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Pages</label>
+                    </li>
+                    <li data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="/Auth/Signup" class="">Sign up</a></li>
+                            <li class=""><a href="/Auth/Login" class="">Sign in</a></li>
+                            <li class=""><a href="/Auth/Logout" class="">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse1" href="javascript:"><span></span></a>
+            <a href="index.html" class="b-brand">
+                <div class="b-bg">
+                    <i class="feather icon-trending-up"></i>
+                </div>
+                <span class="b-title">Datta Able</span>
+            </a>
+        </div>
+        <a class="mobile-menu" id="mobile-header" href="javascript:">
+            <i class="feather icon-more-horizontal"></i>
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li><a href="javascript:" class="full-screen" onclick="javascript:toggleFullScreen()"><i class="feather icon-maximize"></i></a></li>
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle" href="javascript:" data-toggle="dropdown">Dropdown</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:">Action</a></li>
+                        <li><a class="dropdown-item" href="javascript:">Another action</a></li>
+                        <li><a class="dropdown-item" href="javascript:">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <div class="main-search">
+                        <div class="input-group">
+                            <input type="text" id="m-search" class="form-control" placeholder="Search . . .">
+                            <a href="javascript:" class="input-group-append search-close">
+                                <i class="feather icon-x input-group-text"></i>
+                            </a>
+                            <span class="input-group-append search-btn btn btn-primary">
+                                <i class="feather icon-search input-group-text"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="javascript:" data-toggle="dropdown"><i class="icon feather icon-bell"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right notification">
+                            <div class="noti-head">
+                                <h6 class="d-inline-block m-b-0">Notifications</h6>
+                                <div class="float-right">
+                                    <a href="javascript:" class="m-r-10">mark as read</a>
+                                    <a href="javascript:">clear all</a>
+                                </div>
+                            </div>
+                            <ul class="noti-body">
+                                <li class="n-title">
+                                    <p class="m-b-0">NEW</p>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="~/Content/assets/images/user/avatar-1.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>John Doe</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                            <p>New ticket Added</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="n-title">
+                                    <p class="m-b-0">EARLIER</p>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="~/Content/assets/images/user/avatar-2.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>Joseph William</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                            <p>Prchace New Theme and make payment</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="notification">
+                                    <div class="media">
+                                        <img class="img-radius" src="~/Content/assets/images/user/avatar-3.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <p><strong>Sara Soudein</strong><span class="n-time text-muted"><i class="icon feather icon-clock m-r-10"></i>30 min</span></p>
+                                            <p>currently login</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="noti-footer">
+                                <a href="javascript:">show all</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown drp-user">
+                        <a href="javascript:" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon feather icon-settings"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-notification">
+                            <div class="pro-head">
+                                <img src="~/Content/assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+                                <span>John Doe</span>
+                                <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                    <i class="feather icon-log-out"></i>
+                                </a>
+                            </div>
+                            <ul class="pro-body">
+                                <li><a href="javascript:" class="dropdown-item"><i class="feather icon-settings"></i> Settings</a></li>
+                                <li><a href="javascript:" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
+                                <li><a href="message.html" class="dropdown-item"><i class="feather icon-mail"></i> My Messages</a></li>
+                                <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Lock Screen</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/bootstrap-multiselect.js"></script>
+    @RenderBody()
+
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/jqueryval")
+    <script src="~/Content/assets/js/vendor-all.min.js"></script>
+    <script src="~/Content/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/assets/js/pcoded.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            console.log($('.multiple-checkboxes'))
+            $('.multiple-checkboxes').multiselect({
+                buttonWidth: '100%',
+                buttonText: function (options, select) {
+
+                    if (options.length === 0) {
+                        return 'No option selected ...';
+                    } else {
+                        var labels = [];
+                        options.each(function () {
+                            if ($(this).attr('label') !== undefined) {
+                                labels.push($(this).attr('label'));
+                            }
+                            else {
+                                labels.push($(this).html());
+                            }
+                        });
+                        return labels.join(', ') + '';
+                    }
+                }
+            });
+        });
+        function countryChanged(selectedCountry) {
+             $.getJSON('@Url.Action("GetStates", "Student")', { countryId: selectedCountry }, function (regions) {
+                    var stateSelect = $('#States');
+                    var citySelect = $('#Cities');
+                    stateSelect.empty();
+                    citySelect.empty();
+                    if (regions != null && !jQuery.isEmptyObject(regions))
+                    {
+                        console.log(regions);
+                        stateSelect.append($('<option/>', {
+                            value: null,
+                            text: "--- select state ---"
+                        }));
+                        $.each(regions, function (index, region) {
+                            stateSelect.append($('<option/>', {
+                                value: region.Id,
+                                text: region.name
+                            }));
+                        });
+                    }
+                    else {
+                        stateSelect.append($('<option/>', {
+                            value: null,
+                            text: "--- no states ---"
+                        }));
+                    }
+                });
+        }
+        $('#Country').change(function () {
+            var selectedCountry = $("#Country").val();
+            if (selectedCountry != null && selectedCountry != '') {
+                countryChanged(selectedCountry);
+            }
+        });
+        function stateSelected(selectedState, selectedCountry){
+             $.getJSON('@Url.Action("GetCitites", "Student")', { stateId: selectedState, countryId: selectedCountry }, function (regions) {
+                    var citySelect = $('#Cities');
+                    citySelect.empty();
+                            if (regions != null && !jQuery.isEmptyObject(regions))
+                            {
+                                console.log(regions);
+                                citySelect.append($('<option/>', {
+                                    value: null,
+                                    text: "--- select city ---"
+                                }));
+                                $.each(regions, function (index, region) {
+                                    citySelect.append($('<option/>', {
+                                        value: region.Id,
+                                        text: region.name
+                                    }));
+                                });
+                            }
+                            else {
+                                citySelect.append($('<option/>', {
+                                    value: null,
+                                    text: "--- no cities ---"
+                                }));
+                            }
+                        });
+        }
+        $('#States').change(function () {
+            var selectedState = $("#States").val();
+            var selectedCountry = $("#Country").val();
+
+            if (selectedState != null && selectedState != '') {
+                stateSelected(selectedState, selectedCountry);
+            }
+        });
+        $("#SelectedTeachers").change(function () {
+            let values = $('#SelectedTeachers option:selected').map(function (a, item) { return item.value; });
+            console.log(Array.from(values))
+            $.post('@Url.Action("GetTeacherSubjects", "Student")', { teacherList: Array.from(values) }, function (regions) {
+                let newItem = regions.reduce(function (r, a) {
+                    r[a.TeacherId] = r[a.TeacherId] || [];
+                    r[a.TeacherId].push(a);
+                    return r;
+                }, {});
+                $('.techerListing').empty();
+                Object.keys(newItem).forEach((ele,index1) => {
+                    $('.techerListing').append(` <div class="list-group-item list-group-item-action">
+                                                                <div class="d-flex w-100 justify-content-between">
+                                                                    <h5 class="mb-1">${newItem[ele][0].TeacherName}</h5>
+                                                                    <small class="text-muted"></small>
+                                                                </div>
+                                                            <input type="hidden" name="StudentTeachersSubject[${index1}][TeacherId]"/>
+                                                            ${(newItem[ele].map((sub, index2) => {
+                                                                return `<div class="d-inline p-2">
+                                                                <input type="checkbox" id="${sub.SubjectName + sub.SubjectId + sub.TeacherId}" value="${sub.SubjectId}" name="StudentTeachersSubject[${index1}][SelectedSubjectsId]" class="mr-2">
+                                                                <label for="#${sub.SubjectName + sub.SubjectId+ sub.TeacherId}"> ${sub.SubjectName}
+                                                                </label> </div>`
+                                                            })).join(" ")}
+                                                            </div>`)
+                })
+            })
+        });
+        $('[data-StudentId]').click(function () {
+            console.log($(this).attr("data-StudentId"));
+            $('.deletionHidden').val($(this).attr("data-StudentId"));
+        })
+        $(".alert").delay(3000).slideUp(200, function () {
+            $(this).alert('close');
+        });
+        $(function () {
+            var current = location.pathname;
+            $('#nav li a').each(function () {
+                var $this = $(this);
+                var $thisParent = $(this).parent();
+                // if the current path is like this link, make it active
+                if ($this.attr('href').indexOf(current) !== -1 && current != "/") {
+                    $thisParent.addClass('active');
+                    $thisParent.closest(".nav-item").click();
+                    $thisParent.closest(".nav-item").addClass('active');
+                    console.log($thisParent);
+                }
+                
+            })
+        })
+    </script>
+</body>
+</html>
