@@ -1,10 +1,13 @@
-﻿using SchoolMgmt_SIT0346.Models.Context;
+﻿using Newtonsoft.Json;
+using SchoolMgmt_SIT0346.Models.Context;
 using SchoolMgmt_SIT0346.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
+using System.Web.Security;
 
 namespace SchoolMgmt_SIT0346.Helpers
 {
@@ -24,7 +27,8 @@ namespace SchoolMgmt_SIT0346.Helpers
                 City = stu.CityId,
                 State = stu.StateId,
                 Country = stu.CountryId,
-                CreatedBy = 8
+                CreatedBy = 8,
+                Edited = false
             };
         }
         public static StudentModel ConvertToStudentModel(Student stu)
@@ -72,6 +76,12 @@ namespace SchoolMgmt_SIT0346.Helpers
                 StateId = tech.State,
                 CountryId = tech.Country
             };
+        }
+        public static User GetUser(HttpRequestBase Request)
+        {
+            FormsAuthenticationTicket ticket1 = FormsAuthentication.Decrypt(Request.Cookies[FormsAuthentication.FormsCookieName].Value);
+            var user = JsonConvert.DeserializeObject<User>(ticket1.UserData);
+            return user;
         }
     }
 }

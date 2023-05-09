@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using SchoolMgmt_SIT0346.Models.Context;
+using SchoolMgmt_SIT0346.Models.Models;
 using SchoolMgmt_SIT0346.Repositories.Services;
 using System;
 using System.Collections.Generic;
@@ -51,6 +52,20 @@ namespace SchoolMgmt_SIT0346.Controllers
         public ActionResult Signup()
         {
             return View();
+        }
+        [HttpPost]
+        public ActionResult Signup(SignupModel signupModel)
+        {
+            if (authObj.CheckUsername(signupModel.Username))
+            {
+                authObj.SignupUser(signupModel);
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                ViewBag.Error = "Username Already Exists";
+                return View();
+            }
         }
         public ActionResult ResetPassword()
         {

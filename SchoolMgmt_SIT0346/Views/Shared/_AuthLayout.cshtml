@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="~/Content/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
     <link rel="stylesheet" href="~/Content/assets/css/style.css">
+    <link rel="stylesheet" href="~/Content/Site.css">
 </head>
 <body>
     <div class="auth-wrapper">
@@ -25,8 +26,14 @@
     </div>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
     <script src="~/Content/assets/js/vendor-all.min.js"></script>
     <script src="~/Content/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     @RenderSection("scripts", required: false)
+    <script>
+        $(".alert").delay(3000).slideUp(200, function () {
+            $(this).alert('close');
+        });
+    </script>
 </body>
 </html>

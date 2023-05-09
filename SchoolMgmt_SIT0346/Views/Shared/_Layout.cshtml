@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>SMS</title>
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="~/Content/assets/fonts/fontawesome/css/fontawesome-all.min.css">
     <!-- animation css -->
@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="~/Content/assets/css/style.css">
     <link rel="stylesheet" href="~/Content/bootstrap-multiselect.css">
     <link rel="stylesheet" href="~/Content/Site.css">
+    <link rel="stylesheet" href="~/Content/rating.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- [ Pre-loader ] start -->
@@ -29,7 +32,7 @@
                     <div class="b-bg">
                         <i class="feather icon-trending-up"></i>
                     </div>
-                    <span class="b-title">Datta Able</span>
+                    <span class="b-title">SMS</span>
                 </a>
                 <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
             </div>
@@ -218,8 +221,12 @@
     <script src="~/Content/assets/js/vendor-all.min.js"></script>
     <script src="~/Content/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="~/Content/assets/js/pcoded.min.js"></script>
+    <script src="~/Scripts/scriptRating.js"></script>
 
     <script>
+        $(document).ready(function () {
+            $('.rating').rating();
+        });
         $(document).ready(function () {
             console.log($('.multiple-checkboxes'))
             $('.multiple-checkboxes').multiselect({
@@ -357,7 +364,7 @@
                     $thisParent.closest(".nav-item").addClass('active');
                     console.log($thisParent);
                 }
-                
+
             })
         })
     </script>

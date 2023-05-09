@@ -1,4 +1,5 @@
 ﻿using SchoolMgmt_SIT0346.Models.Context;
+using SchoolMgmt_SIT0346.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,7 @@ namespace SchoolMgmt_SIT0346.Repositories.Repositories
     {
         bool FindUser(User user);
         User GetUser(User user);
+        void SignupUser(SignupModel signupModel);
+        bool CheckUsername(string username);
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace SchoolMgmt_SIT0346.Repositories.Repositories
 {
@@ -17,7 +18,7 @@ namespace SchoolMgmt_SIT0346.Repositories.Repositories
         List<Teacher> GetTeachers();
 
         StudentModel GetStudentById(int Id);
-        void AddStudent(StudentModel std);
+        void AddStudent(StudentModel std, HttpRequestBase Request);
         void EditStudent(StudentModel std);
         List<TeacherSubjectsModel> GetTeacherSubjects(List<int> teacherList);
     }

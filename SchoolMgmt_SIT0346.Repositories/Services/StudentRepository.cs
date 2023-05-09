@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Globalization;
+using System.Web;
 
 namespace SchoolMgmt_SIT0346.Repositories.Services
 {
@@ -40,10 +41,12 @@ namespace SchoolMgmt_SIT0346.Repositories.Services
             db.Configuration.ProxyCreationEnabled = false;
             return db.Cities.Where(c => c.StateID == stateId && c.CountryID == countryId).ToList();
         }
-        public void AddStudent(StudentModel std)
+        public void AddStudent(StudentModel std, HttpRequestBase Request)
         {
+            User CurrentUser = ModelConvertor.GetUser(Request);
             AP351AteetPrajapatiEntities db = new AP351AteetPrajapatiEntities();
             Student student = ModelConvertor.ConvertToDataObj(std);
+            student.CreatedBy = CurrentUser.Id;
             db.Students.Add(student);
             db.SaveChanges();
             foreach (int i in std.Teachers)

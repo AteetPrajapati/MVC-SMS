@@ -10,3 +10,5 @@ C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Helpers\bin\Debug\Scho
 C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Helpers\bin\Debug\EntityFramework.xml
 C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Helpers\obj\Debug\SchoolMgmt_SIT0346.Helpers.csproj.AssemblyReference.cache
 C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Helpers\obj\Debug\SchoolMgmt_SIT0346.Helpers.csproj.CopyComplete
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Helpers\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Helpers\bin\Debug\Newtonsoft.Json.xml

@@ -15,3 +15,5 @@ C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\obj\Debug
 C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\obj\Debug\SchoolMgmt_SIT0346.Repositories.pdb
 C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\SchoolMgmt_SIT0346.Helpers.dll
 C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\SchoolMgmt_SIT0346.Helpers.pdb
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sit302\Desktop\InternShip\MVC\SchoolMgmt_SIT0346.Repositories\bin\Debug\Newtonsoft.Json.xml

@@ -1,4 +1,5 @@
-﻿using SchoolMgmt_SIT0346.Models.Context;
+﻿using SchoolMgmt_SIT0346.Helpers;
+using SchoolMgmt_SIT0346.Models.Context;
 using SchoolMgmt_SIT0346.Models.Models;
 using SchoolMgmt_SIT0346.Repositories.Repositories;
 using SchoolMgmt_SIT0346.Repositories.Services;
@@ -23,7 +24,8 @@ namespace SchoolMgmt_SIT0346.Controllers
         // GET: Student
         public ActionResult Index()
         {
-            List<Student> AllStudents = studentRepoObj.GetStudents();
+            User CurrentUser = ModelConvertor.GetUser(Request);
+            List<Student> AllStudents = studentRepoObj.GetStudents().FindAll(s => s.CreatedBy == CurrentUser.Id);
             return View(AllStudents);
         }
         public ActionResult Add()
@@ -35,7 +37,7 @@ namespace SchoolMgmt_SIT0346.Controllers
         [HttpPost]
         public ActionResult Add(StudentModel std)
         {
-            studentRepoObj.AddStudent(std);
+            studentRepoObj.AddStudent(std, Request);
             return RedirectToAction("Index");
         }
         public ActionResult EditStudent(int id)
